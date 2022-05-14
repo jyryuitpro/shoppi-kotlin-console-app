@@ -1,5 +1,7 @@
 package screen
 
+import extensions.getNotEmptyString
+
 class ShoppingCategory {
     fun showCategories() {
         val categories = arrayOf("패션", "전자기기", "반려동물용품")
@@ -8,11 +10,11 @@ class ShoppingCategory {
         }
         println("=> 장바구니로 이동하시려면 #을 입력해주세요")
 
-        var selectedCategory = readLine()
-        while (selectedCategory.isNullOrBlank()) {
-            println("값을 입력해주세요")
-            selectedCategory = readLine()
-        }
+        val selectedCategory = readLine().getNotEmptyString()
+//        while (selectedCategory.isNullOrBlank()) {
+//            println("값을 입력해주세요")
+//            selectedCategory = readLine()
+//        }
         if (selectedCategory == "#") {
             // TODO: 2022/05/14 장바구니 이동
             val shoppingCart = ShoppingCart()
