@@ -18,7 +18,8 @@ class ShoppingCategory {
         } else {
             if (categories.contains(selectedCategory)) {
                 // TODO: 2022/05/14 카테고리 상품 목록 보여주기
-
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProducts(selectedCategory)
             } else {
                 // TODO: 2022/05/14 카테고리 목록에 없는 값을 입력하는 경우
                 showErrorMessage(selectedCategory)
