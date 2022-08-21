@@ -12,7 +12,7 @@ Step 1. 장바구니에 추가한 상품 관리
 Step 2. 사용자 입력값 요청 처리 공통화
 Step 3. 프로젝트 전역에서 참조하는 함수
  */
-class ShoppingCategory {
+class ShoppingCategory : Screen() {
 
     fun showCategories() {
         /*
@@ -23,6 +23,7 @@ class ShoppingCategory {
         Step 2. 사용자 입력 받기
         Step 3. 사용자가 기대하는 값을 입력하지 않는 경우에 대한 처리
          */
+        ScreenStack.push(this)
         val categories = arrayOf("패션", "전자기기", "반려동물용품")
         for (category in categories) {
             println(category)
